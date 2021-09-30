@@ -1,0 +1,30 @@
+function getVowel(str) 
+
+{
+    var vowel = 'AEIOUaeiou'
+    var vowelsString = "";
+     
+
+     for(var i = 0; i < str.length ; i++)
+      {
+
+lwcstr = str[i].toLowerCase();
+
+        if (vowel.indexOf(lwcstr) !== -1) 
+        {
+          
+        if(!vowelsString.includes(lwcstr))
+          {
+            
+            
+     vowelsString =  vowelsString  + lwcstr +","
+          }
+        }
+        
+       
+      }
+   return vowelsString
+    } 
+    
+    
+    console.log("Vowels:" + getVowel("Umuzi"))
