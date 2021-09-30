@@ -1,41 +1,18 @@
-
-var high = 0
-function checkCommon(str1,str2) 
-
-
-
+function returnCommon(string1 , string2)
 {
-    length1  = str1.length
-    length2  = str2.length
-    
-    if(length1 > length2)
-    {
-      
-      high = length1
-      
+    let results = ' ';
+    for (let i of string1){
+        for(let n of string2){
+            if( n === i){
+                results = results + (n) +","; 
+            }
+        }
     }
-    else
-    {
-      high = length2
-      
-    }
-   
-   for(var x = ; x < high ; x++)
-    {
-      
-      if(str1[x] ==str2[x] )
-      {
-        
-        console.log([x])
+    return results;
     
-        
-      }
-      
-    }
-    
-  
-    
-    } 
-    
-    checkCommon("Katlego","Kat")
+}
+
+ console.log("Common letters:" + returnCommon("house" , "Computer"))
+
+
    
